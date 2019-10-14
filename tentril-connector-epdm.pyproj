@@ -4,13 +4,15 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>345e6d2e-57a8-4329-9a6f-fe251d1d6ccc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>tentril_connector_epdm.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>tentril-connector-epdm</Name>
     <RootNamespace>tentril-connector-epdm</RootNamespace>
+    <InterpreterId>MSBuild|tendril-3.6|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +23,41 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="tentril_connector_epdm.py" />
+    <Folder Include="src\" />
+    <Folder Include="src\tendril\" />
+    <Folder Include="src\tendril\config\" />
+    <Folder Include="src\tendril\connectors\" />
+    <Folder Include="src\tendril\connectors\epdm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="setup.py" />
+    <Compile Include="src\tendril\config\epdm.py" />
+    <Compile Include="src\tendril\config\__init__.py" />
+    <Compile Include="src\tendril\connectors\epdm\cache.py" />
+    <Compile Include="src\tendril\connectors\epdm\__init__.py" />
+    <Compile Include="src\tendril\connectors\__init__.py" />
+    <Compile Include="src\tendril\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\envs\tendril-3.6\">
+      <Id>tendril-3.6</Id>
+      <Version>3.6</Version>
+      <Description>tendril-3.6 (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".readthedocs.yml" />
+    <Content Include=".travis.yml" />
+    <Content Include="CHANGELOG.rst" />
+    <Content Include="LICENSE" />
+    <Content Include="MANIFEST.in" />
+    <Content Include="README.rst" />
+    <Content Include="setup.cfg" />
+    <Content Include="tox.ini" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
