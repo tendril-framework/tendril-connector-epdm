@@ -15,12 +15,12 @@ config_elements_epdm = [
     ),
     ConfigOption(
         "EPDM_USERNAME",
-        "",
+        "''",
         "Username to use to connect to EPDM"
     ),
     ConfigOption(
         "EPDM_PASSWORD",
-        "",
+        "''",
         "Password to use to connect to EPDM"
     )
 ]
