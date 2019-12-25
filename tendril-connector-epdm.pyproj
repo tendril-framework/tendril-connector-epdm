@@ -10,8 +10,8 @@
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>tentril-connector-epdm</Name>
-    <RootNamespace>tentril-connector-epdm</RootNamespace>
+    <Name>tendril-connector-epdm</Name>
+    <RootNamespace>tendril-connector-epdm</RootNamespace>
     <InterpreterId>MSBuild|tendril-3.6|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
